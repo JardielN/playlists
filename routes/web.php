@@ -13,4 +13,6 @@ Route::get('/', function(){
 });
 */
 
-Route::get('/', [PagesController::class, 'dashboard']);
+Route::get('/', [PagesController::class, 'dashboard'])->name('dashboard');
+Route::get('/lineas', [PagesController::class, 'monitorLineas'])->name('lineas.index');
+Route::get('/alertas', [PagesController::class, 'reportarAlerta'])->name('alertas.create');
